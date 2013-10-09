@@ -16,3 +16,5 @@ git clone git://git.saurik.com/cydia.git
 5. sudo fink install bash ldid tar wget xz
 6. ./sysroot.sh
 7. make package
+
+Description: http://ichitaso.com/jailebreak/iphone-4-ios7-cydia-install/
