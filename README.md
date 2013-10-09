@@ -7,7 +7,7 @@ Use Xcode 5.0 and iPhoneOS6.1.sdk
 -----------------------------------------------------------
 
 1. git clone https://github.com/ichitaso/Cydia_1.1.8_Fix.git
-2. Replace to cydia ( SDURLCache /Library/move.sh makefile MobileCydia.mm )
+2. Replace to cydia ( SDURLCache, /Library/move.sh, makefile, MobileCydia.mm )
 3. (SDURLCache orignal: https://github.com/SaurikIT/SDURLCache ) 
 4. install Fink (the only sane choice)
 5. activate Fink (. /sw/bin/init.sh)
