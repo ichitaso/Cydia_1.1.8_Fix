@@ -7,7 +7,14 @@ git clone git://git.saurik.com/cydia.git
 -----------------------------------------------------------
 
 1. git clone https://github.com/ichitaso/Cydia_1.1.8_Fix.git
-2. Replace to cydia ( SDURLCache, /Library/move.sh, makefile, MobileCydia.mm )
+2. Replace to cydia
+
+- SDURLCache
+- /Library/move.sh
+- makefile
+- MobileCydia.mm
+- /Cydia/LoadingViewController.mm
+- /CyteKit/ViewController.mm
 
   (SDURLCache orignal: https://github.com/SaurikIT/SDURLCache )
 

@@ -4059,7 +4059,9 @@ static _H<NSMutableSet> Diversions_;
 }
 
 - (NSString *) device {
-    return [[UIDevice currentDevice] uniqueIdentifier];
+//111
+    Class AADeviceInfo = NSClassFromString(@"AADeviceInfo");
+    return [AADeviceInfo udid]; // [[UIDevice currentDevice] uniqueIdentifier];
 }
 
 - (NSString *) firmware {
@@ -5919,7 +5921,9 @@ bool DepSubstrate(const pkgCache::VerIterator &iterator) {
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
+    //111
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        [self setEdgesForExtendedLayout:0];
     [[self navigationItem] setTitle:UCLocalize("INSTALLED_FILES")];
 }
 
@@ -7580,7 +7584,9 @@ static void HomeControllerReachabilityCallback(SCNetworkReachabilityRef reachabi
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
+    //111
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        [self setEdgesForExtendedLayout:0];
     [[self navigationItem] setTitle:UCLocalize("SECTIONS")];
 }
 
@@ -7865,7 +7871,9 @@ static void HomeControllerReachabilityCallback(SCNetworkReachabilityRef reachabi
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
+    //111
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        [self setEdgesForExtendedLayout:0];
     [[self navigationItem] setTitle:(AprilFools_ ? @"Timeline" : UCLocalize("CHANGES"))];
 }
 
@@ -8296,7 +8304,9 @@ static void HomeControllerReachabilityCallback(SCNetworkReachabilityRef reachabi
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
+    //111
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        [self setEdgesForExtendedLayout:0];
     [[self navigationItem] setTitle:UCLocalize("SETTINGS")];
 }
 
@@ -8881,7 +8891,9 @@ static void HomeControllerReachabilityCallback(SCNetworkReachabilityRef reachabi
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
+    //111
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        [self setEdgesForExtendedLayout:0];
     [[self navigationItem] setTitle:UCLocalize("SOURCES")];
     [self updateButtonsForEditingStatusAnimated:NO];
 }
@@ -9037,7 +9049,9 @@ static void HomeControllerReachabilityCallback(SCNetworkReachabilityRef reachabi
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
+    //111
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        [self setEdgesForExtendedLayout:0];
     [[self navigationItem] setTitle:UCLocalize("WHO_ARE_YOU")];
 
     int index = -1;
@@ -10685,8 +10699,9 @@ int main(int argc, char *argv[]) {
     SerialNumber_ = (NSString *) CYIOGetValue("IOService:/", @"IOPlatformSerialNumber");
     ChipID_ = [CYHex((NSData *) CYIOGetValue("IODeviceTree:/chosen", @"unique-chip-id"), true) uppercaseString];
     BBSNum_ = CYHex((NSData *) CYIOGetValue("IOService:/AppleARMPE/baseband", @"snum"), false);
-
-    UniqueID_ = [device uniqueIdentifier];
+//111
+    Class AADeviceInfo = NSClassFromString(@"AADeviceInfo");
+    UniqueID_ = [AADeviceInfo udid]; //[device uniqueIdentifier];
 
     if (NSDictionary *info = [NSDictionary dictionaryWithContentsOfFile:@"/Applications/MobileSafari.app/Info.plist"]) {
         Product_ = [info objectForKey:@"SafariProductVersion"];
