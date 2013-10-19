@@ -6,8 +6,9 @@ git clone git://git.saurik.com/cydia.git
 
 -----------------------------------------------------------
 
-1. git clone https://github.com/ichitaso/Cydia_1.1.8_Fix.git
-2. Replace to cydia
+1. git clone git://git.saurik.com/cydia.git
+2. git clone https://github.com/ichitaso/Cydia_1.1.8_Fix.git
+3. Replace to cydia
 
 - SDURLCache
 - /Library/move.sh
@@ -17,6 +18,8 @@ git clone git://git.saurik.com/cydia.git
 - /CyteKit/ViewController.mm
 
   (SDURLCache orignal: https://github.com/SaurikIT/SDURLCache )
+
+-----------------------------------------------------------
 
 3. install Fink (the only sane choice)
 4. activate Fink (. /sw/bin/init.sh)
