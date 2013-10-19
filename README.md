@@ -2,8 +2,6 @@ Cydia 1.1.8+ for iPhone 4 iOS 7 fixed
 ====
 Use Xcode 5.0 and iPhoneOS6.1.sdk
 
-git clone git://git.saurik.com/cydia.git
-
 -----------------------------------------------------------
 
 1. git clone git://git.saurik.com/cydia.git
