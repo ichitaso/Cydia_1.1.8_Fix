@@ -9,7 +9,6 @@ Use Xcode 5.0 and iPhoneOS6.1.sdk
 3. Replace to cydia
 
 - SDURLCache
-- /Library/move.sh
 - makefile
 - MobileCydia.mm
 - /Cydia/LoadingViewController.mm
